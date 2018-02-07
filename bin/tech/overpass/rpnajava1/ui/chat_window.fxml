@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #397560;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tech.overpass.rpnajava1.controllers.ChatController">
+   <children>
+      <TextArea fx:id="txtAreaMessages" layoutX="158.0" layoutY="14.0" prefHeight="625.0" prefWidth="826.0" />
+      <TextArea fx:id="txtAreaNicknameAndTime" layoutX="14.0" layoutY="14.0" prefHeight="625.0" prefWidth="128.0" />
+      <TextField fx:id="txtfldMessageInput" layoutX="154.0" layoutY="655.0" prefHeight="31.0" prefWidth="832.0" />
+      <Label layoutX="31.0" layoutY="660.0" prefHeight="21.0" prefWidth="95.0" text="Сообщение:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

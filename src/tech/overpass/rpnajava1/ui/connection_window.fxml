@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tech.overpass.rpnajava1.controllers.ConnectionController">
+   <children>
+      <Label layoutX="11.0" layoutY="15.0" text="IP адрес сервера:" />
+      <Label layoutX="52.0" layoutY="59.0" text="Порт:" />
+      <Label layoutX="56.0" layoutY="106.0" text="Ник:" />
+      <Button layoutX="40.0" layoutY="155.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="260.0" text="Подключиться" fx:id="btnConnect" onAction="#connect"/>
+      <TextField layoutX="139.0" layoutY="10.0" fx:id="txtfldIPAddress"/>
+      <TextField layoutX="139.0" layoutY="54.0" fx:id="txtfldPort"/>
+      <TextField layoutX="139.0" layoutY="101.0" fx:id="txtfldNickname"/>
+   </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+февр. 06, 2018 3:12:32 ПП tech.overpass.socketsattempt4.Server logMessage
+INFO: Dandy (03:12) : Hello
+февр. 06, 2018 3:12:41 ПП tech.overpass.socketsattempt4.Server logMessage
+INFO: Father (03:12) : Hi
+февр. 06, 2018 3:13:19 ПП tech.overpass.socketsattempt4.Server logMessage
+INFO: Dandy (03:13) : goodbye
+февр. 06, 2018 3:13:28 ПП tech.overpass.socketsattempt4.Server logMessage
+INFO: Father (03:13) : bb
+февр. 06, 2018 3:14:16 ПП tech.overpass.socketsattempt4.Server logMessage
+INFO: Father (03:14) : sdf
+февр. 07, 2018 11:03:35 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (11:03) : rsdf
+февр. 07, 2018 11:09:20 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (11:09) : sdf
+февр. 07, 2018 11:09:22 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (11:09) : dfdsf
+февр. 07, 2018 12:23:33 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:23) : sdf
+февр. 07, 2018 12:55:51 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:55) : fsgfdg
+февр. 07, 2018 12:55:53 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:55) : sdfdsf
+февр. 07, 2018 4:45:17 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: sadness (04:45) : asd
+февр. 07, 2018 4:51:23 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (04:51) : zxczx
+февр. 07, 2018 4:58:46 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (04:58) : sdfs
+февр. 07, 2018 4:58:49 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (04:58) : qqqwe
+февр. 07, 2018 5:14:53 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (05:14) : rgfd
+февр. 07, 2018 5:17:35 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (05:17) : sdfdsf
+февр. 07, 2018 5:35:20 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (05:35) : /xit
+февр. 07, 2018 5:50:19 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (05:50) : khkl
+февр. 07, 2018 5:53:07 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (05:53) : dsfsd
+февр. 07, 2018 6:17:11 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (06:17) : dsf
+февр. 07, 2018 6:23:19 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (06:23) : fdgdg
+февр. 07, 2018 6:23:20 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (06:23) : gfhfgh
+февр. 07, 2018 10:40:22 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: Goose (10:40) : sdf
+февр. 07, 2018 10:40:23 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: Goose (10:40) : sdfdsf
+февр. 07, 2018 10:40:27 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: Goose (10:40) : /
