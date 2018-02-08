@@ -50,3 +50,66 @@ INFO: Goose (10:40) : sdf
 INFO: Goose (10:40) : sdfdsf
 февр. 07, 2018 10:40:27 ПП tech.overpass.rpnajava1.server.Server logMessage
 INFO: Goose (10:40) : /
+февр. 08, 2018 11:56:36 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (11:56) : 
+февр. 08, 2018 11:59:09 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (11:58) : 
+февр. 09, 2018 12:11:28 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:11) : 
+февр. 09, 2018 12:12:09 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:12) : 
+февр. 09, 2018 12:15:47 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:15) : 
+февр. 09, 2018 12:16:44 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:16) : 
+февр. 09, 2018 12:28:36 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:28) : 
+февр. 09, 2018 12:28:48 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:28) : 
+февр. 09, 2018 12:28:49 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:28) : 
+февр. 09, 2018 12:28:50 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:28) : 
+февр. 09, 2018 12:28:59 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:28) : 
+февр. 09, 2018 12:30:32 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:30) : sdfdsf
+февр. 09, 2018 12:30:38 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:30) : hello
+февр. 09, 2018 12:30:54 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:30) : hello
+февр. 09, 2018 12:33:38 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:33) : 
+dsfsv
+февр. 09, 2018 12:33:43 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:33) : 
+dsfsv
+sadasd
+февр. 09, 2018 12:34:18 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:34) : 
+dsfsv
+sadasd
+dsfd
+февр. 09, 2018 12:35:06 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:35) : 
+dsfsv
+sadasd
+dsfd
+opa
+февр. 09, 2018 12:36:39 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:36) : 
+dsfsv
+sadasd
+dsfd
+opa
+sdvs
+февр. 09, 2018 12:38:34 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:38) : dsfdsf
+февр. 09, 2018 12:38:58 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:38) : kmkmk
+февр. 09, 2018 12:39:43 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:39) : kmkmk
+февр. 09, 2018 12:41:18 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:41) : dfsdf
+февр. 09, 2018 12:41:21 ДП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username (12:41) : sdfsdf

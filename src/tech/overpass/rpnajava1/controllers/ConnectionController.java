@@ -11,10 +11,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import tech.overpass.rpnajava1.client.Client;
+import tech.overpass.rpnajava1.client.ClientThread;
+import tech.overpass.rpnajava1.server.Server;
 import tech.overpass.rpnajava1.util.InputValidator;
 
 public class ConnectionController implements Initializable {
@@ -29,8 +32,8 @@ public class ConnectionController implements Initializable {
 	private TextField txtfldNickname;
 	private Client client;
 	private Stage stage;
-	private Thread connectionThread;
 	private ChatController chatController;
+	private ClientThread clientThread;
 	
 	private void switchToChatWindow() {
 		try {
@@ -40,6 +43,10 @@ public class ConnectionController implements Initializable {
 			Scene scene = new Scene(root);
 			chatController = (ChatController) fxmlLoader.getController();
 			chatController.setClient(this.client);
+			synchronized (client) {
+				clientThread.setChatController(chatController);
+				client.notifyAll();
+			}
 			stage.setScene(scene);
 			stage.centerOnScreen();
 		} catch (Exception e) {
@@ -76,25 +83,46 @@ public class ConnectionController implements Initializable {
 				"username";
 				System.out.println("The client: " + serverIP + ", " + serverPort + "," + userName + ";");
 		client = new Client(serverIP, serverPort, userName);
-		connectionThread = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				client.connect();
-			}
-		});
-		connectionThread.start();
+		clientThread = new ClientThread(this);
+		clientThread.start();
+//		connectionThread = new Thread(new Runnable() {
+//			@Override
+//			public void run() {
+//				client.connect();
+//			}
+//		});
+//		connectionThread.start();
 		switchToChatWindow();
 	}
+	
+//	public void connect(String string /* TODO */) {
+//		ClientThread clientThread = new ClientThread(this);
+//		Thread thread = new Thread(clientThread);
+//		thread.start();
+//		try {
+//			thread.join();
+//		} catch (InterruptedException e) {
+//			clientThread.stop();
+//			thread.interrupt();
+//			System.err.println("The chat window has been closed.");
+//			e.printStackTrace();
+//		}
+//	}
 	
 	public void setStage(Stage stage) {
 		this.stage = stage;
 		stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
 			@Override
 			public void handle(WindowEvent windowEvent) {
-				connectionThread.interrupt();
+				//connectionThread.interrupt();
+				clientThread.interrupt();
 				Platform.exit();
 			}
 		});
+	}
+
+	public Client getClient() {
+		return client;
 	}
 
 }

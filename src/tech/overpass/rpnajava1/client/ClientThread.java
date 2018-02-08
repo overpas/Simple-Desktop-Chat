@@ -10,21 +10,32 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Date;
 
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import tech.overpass.rpnajava1.controllers.ChatController;
+import tech.overpass.rpnajava1.controllers.ConnectionController;
 import tech.overpass.rpnajava1.model.Message;
 import tech.overpass.rpnajava1.server.*;
 
-public class ClientThread implements Runnable {
+public class ClientThread extends Thread {
 
 	private Client client;
 	private Thread readMessageThread;
+	private ChatController chatController = null;
 
-	public ClientThread(Client client) {
-		this.client = client;
+	public ClientThread(ConnectionController connectionController) {
+		this.client = connectionController.getClient();
 	}
 
 	@Override
 	public void run() {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+		synchronized (client) {
+			try {
+				client.wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
 		try {
 			System.out.println(client.getServerIP() + ":" + client.getServerPort());
 			Socket socket = new Socket(client.getServerIP(), client.getServerPort());
@@ -42,20 +53,34 @@ public class ClientThread implements Runnable {
 				readMessageThread = new Thread(new ReadMessage(in)); // поток чтения входящих сообщений
 				readMessageThread.start();
 
-				while (true) { // поток ввода сообщения
-					String msg = br.readLine();
-					if (msg.equals("/exit")) {
-						readMessageThread.interrupt();
-						break;
+//				while (true) { // поток ввода сообщения
+//					String msg = txtfldInput.getText();
+//					if (msg.equals("/exit")) {
+//						readMessageThread.interrupt();
+//						break;
+//					}
+//					Message message = new Message(client.getUserName(), msg, new Date());
+//					oos.writeObject(message);
+//				}
+				
+				while (true) {
+					synchronized (client) {
+						try {
+							client.wait();
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+						String userInput = chatController.getInputBeforeLastWipe();
+						System.out.println("input = " + userInput);
+						String msg = userInput;
+						Message message = new Message(client.getUserName(), msg, new Date());
+						oos.writeObject(message);
 					}
-					Message message = new Message(client.getUserName(), msg, new Date());
-					oos.writeObject(message);
 				}
 			}
 			finally {
 				System.out.println("Closing: " + socket);
 				socket.close();
-				br.close();
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -63,12 +88,8 @@ public class ClientThread implements Runnable {
 		}
 	}
 	
-	public void stop() {
-		if (readMessageThread != null) {
-			if (readMessageThread.isAlive()) {
-				readMessageThread.interrupt();
-			}
-		}
+	public void setChatController(ChatController chatController) {
+		this.chatController = chatController;
 	}
 	
 }

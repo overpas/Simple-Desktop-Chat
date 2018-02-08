@@ -42,6 +42,7 @@ class ClientServiceThread extends Thread {
 				String completeMessage = message.getName() + " (" + dateFormat.format(message.gerDate()) + ") " + ": "
 						+ message.getMessage();
 				Server.clients.distribute(socket, completeMessage);
+				//Server.clients.sendToAllClients(completeMessage);
 				Server.logMessage(completeMessage);
 			}
 		} catch (IOException e) {
@@ -53,6 +54,7 @@ class ClientServiceThread extends Thread {
 		} finally {
 			System.out.println("Closing: " + socket);
 			Server.clients.distribute(socket, "Left: " + username);
+			//Server.clients.sendToAllClients("Left: " + username);
 			try {
 				socket.close();
 			} catch (IOException e) {
