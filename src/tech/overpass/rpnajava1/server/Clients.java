@@ -3,8 +3,6 @@ package tech.overpass.rpnajava1.server;
 import java.net.Socket;
 import java.util.ArrayList;
 
-import tech.overpass.rpnajava1.controllers.ChatController;
-
 class Clients {
 
 	private ArrayList<ClientServiceThread> clients = new ArrayList<>();
@@ -15,9 +13,11 @@ class Clients {
 		count++;
 	}
 
-	public void distribute(Socket s, String message) {
+	public void distribute(Socket s, String message, String exceptUserName) {
 		for (ClientServiceThread cst : clients) {
-			cst.sendMsg(message);
+			if (!cst.getUserName().equals(exceptUserName)) {
+				cst.sendMsg(message);
+			}
 		}
 	}
 

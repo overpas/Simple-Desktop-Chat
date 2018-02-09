@@ -14,7 +14,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import tech.overpass.rpnajava1.client.Client;
-import tech.overpass.rpnajava1.server.Server;
 
 public class ChatController implements Initializable {
 
@@ -33,14 +32,11 @@ public class ChatController implements Initializable {
 			@Override
 			public void handle(KeyEvent event) {
 				if (event.getCode().equals(KeyCode.ENTER)) {
-					// TODO
-					String previousMessages = txtAreaMessages.getText();
-					String previousNicknamesAndDates = txtAreaNicknameAndTime.getText();
 					String message = txtfldMessageInput.getText();
-					txtAreaMessages.setText(previousMessages + System.lineSeparator() + message);
+					txtAreaMessages.appendText(message + System.lineSeparator());
 					DateFormat formatter = new SimpleDateFormat("hh:mm");
-					txtAreaNicknameAndTime.setText(previousNicknamesAndDates + System.lineSeparator()
-							+ client.getUserName() + " [" + formatter.format(new Date()) + "]");
+					txtAreaNicknameAndTime.appendText(client.getUserName() + " [" 
+							+ formatter.format(new Date()) + "]" + System.lineSeparator());
 					inputBeforeLastWipe = txtfldMessageInput.getText();
 					txtfldMessageInput.setText("");
 					synchronized (client) {
@@ -56,13 +52,20 @@ public class ChatController implements Initializable {
 	public void setClient(Client client) {
 		this.client = client;
 	}
-
-	public TextField getMessageInputTextField() {
-		return txtfldMessageInput;
-	}
 	
 	public String getInputBeforeLastWipe() {
 		return inputBeforeLastWipe;
+	}
+	
+	public void sendMessage(String message) {
+		if (message.contains(">")) {
+			String[] messageParts = message.split(">", 2);
+			txtAreaNicknameAndTime.appendText(messageParts[0].trim() + System.lineSeparator());
+			txtAreaMessages.appendText(messageParts[1].trim() + System.lineSeparator());
+		} else {
+			txtAreaNicknameAndTime.appendText(message + System.lineSeparator());
+			txtAreaMessages.appendText(System.lineSeparator());
+		}
 	}
 
 }

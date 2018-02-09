@@ -11,13 +11,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import tech.overpass.rpnajava1.client.Client;
 import tech.overpass.rpnajava1.client.ClientThread;
-import tech.overpass.rpnajava1.server.Server;
 import tech.overpass.rpnajava1.util.InputValidator;
 
 public class ConnectionController implements Initializable {
@@ -81,40 +79,17 @@ public class ConnectionController implements Initializable {
 		String userName = InputValidator.isUserNameValid(txtfldNickname.getText()) ?
 				txtfldNickname.getText() :
 				"username";
-				System.out.println("The client: " + serverIP + ", " + serverPort + "," + userName + ";");
 		client = new Client(serverIP, serverPort, userName);
 		clientThread = new ClientThread(this);
 		clientThread.start();
-//		connectionThread = new Thread(new Runnable() {
-//			@Override
-//			public void run() {
-//				client.connect();
-//			}
-//		});
-//		connectionThread.start();
 		switchToChatWindow();
 	}
-	
-//	public void connect(String string /* TODO */) {
-//		ClientThread clientThread = new ClientThread(this);
-//		Thread thread = new Thread(clientThread);
-//		thread.start();
-//		try {
-//			thread.join();
-//		} catch (InterruptedException e) {
-//			clientThread.stop();
-//			thread.interrupt();
-//			System.err.println("The chat window has been closed.");
-//			e.printStackTrace();
-//		}
-//	}
 	
 	public void setStage(Stage stage) {
 		this.stage = stage;
 		stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
 			@Override
 			public void handle(WindowEvent windowEvent) {
-				//connectionThread.interrupt();
 				clientThread.interrupt();
 				Platform.exit();
 			}

@@ -12,8 +12,6 @@ public class LogConfigurator {
 		SimpleFormatter formatter = new SimpleFormatter();
 		fileHandler.setFormatter(formatter);
 		logger.addHandler(fileHandler);
-		//disable console log output
-		//logger.setUseParentHandlers(false);
 	}
 	
 }

@@ -5,7 +5,6 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.logging.Logger;
 
-import tech.overpass.rpnajava1.controllers.ChatController;
 import tech.overpass.rpnajava1.util.LogConfigurator;
 
 public class Server {
@@ -43,8 +42,5 @@ public class Server {
 	public static void logMessage(String completeMessage) {
 		messageLogger.info(completeMessage);
 	}
-	
-//	public static void addChatClient(ChatController chatController) {
-//		clients.addChatClient(chatController);
-//	}
+
 }

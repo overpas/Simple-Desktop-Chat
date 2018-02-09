@@ -34,27 +34,26 @@ class ClientServiceThread extends Thread {
 	public void run() {
 		try {
 			username = in.readLine();
-			Server.clients.distribute(socket, "Joined: " + username);
 			while (!socket.isClosed()) {
 				Message message = (Message) ois.readObject();
 				Server.lastMessage.add(message.getMessage());
 				DateFormat dateFormat = new SimpleDateFormat("hh:mm");
-				String completeMessage = message.getName() + " (" + dateFormat.format(message.gerDate()) + ") " + ": "
+				String completeMessage = message.getName() + " [" 
+						+ dateFormat.format(message.gerDate()) + "]> "
 						+ message.getMessage();
-				Server.clients.distribute(socket, completeMessage);
-				//Server.clients.sendToAllClients(completeMessage);
+				Server.clients.distribute(socket, completeMessage, username);
 				Server.logMessage(completeMessage);
 			}
 		} catch (IOException e) {
 			DateFormat dateFormat = new SimpleDateFormat("hh:mm:ss");
-			System.out.println("[" + dateFormat.format(new Date()) + "] User " + username + " disconnected.");
+			System.out.println("[" + dateFormat.format(new Date()) + "]> User " 
+					+ username + " disconnected.");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			System.err.println("Class not found");
 		} finally {
 			System.out.println("Closing: " + socket);
-			Server.clients.distribute(socket, "Left: " + username);
-			//Server.clients.sendToAllClients("Left: " + username);
+			Server.clients.distribute(socket, "Left: " + username, username);
 			try {
 				socket.close();
 			} catch (IOException e) {
@@ -70,5 +69,9 @@ class ClientServiceThread extends Thread {
 
 	public Socket getSocket() {
 		return socket;
+	}
+	
+	public String getUserName() {
+		return username;
 	}
 }
