@@ -150,3 +150,13 @@ INFO: username [10:41]> sdf
 INFO: username [10:41]> sdf
 февр. 09, 2018 10:41:46 ПП tech.overpass.rpnajava1.server.Server logMessage
 INFO: username [10:41]> sdfsdf
+февр. 09, 2018 11:00:02 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: userna [11:00]> sdfsfd
+февр. 09, 2018 11:00:05 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: userna [11:00]> sdf
+февр. 09, 2018 11:00:08 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: fuse [11:00]> qwd
+февр. 09, 2018 11:00:11 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: fuse [11:00]> sdf
+февр. 09, 2018 11:00:15 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: userna [11:00]> sdfsd
