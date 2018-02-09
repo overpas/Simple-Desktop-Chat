@@ -5,14 +5,15 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tech.overpass.rpnajava1.controllers.ConnectionController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="242.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tech.overpass.rpnajava1.controllers.ConnectionController">
    <children>
-      <Label layoutX="11.0" layoutY="15.0" text="IP адрес сервера:" />
-      <Label layoutX="52.0" layoutY="59.0" text="Порт:" />
-      <Label layoutX="56.0" layoutY="106.0" text="Ник:" />
-      <Button layoutX="40.0" layoutY="155.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="260.0" text="Подключиться" fx:id="btnConnect" onAction="#connect"/>
-      <TextField layoutX="139.0" layoutY="10.0" fx:id="txtfldIPAddress"/>
-      <TextField layoutX="139.0" layoutY="54.0" fx:id="txtfldPort"/>
-      <TextField layoutX="139.0" layoutY="101.0" fx:id="txtfldNickname"/>
+      <Label layoutX="13.0" layoutY="65.0" text="IP адрес сервера:" />
+      <Label layoutX="54.0" layoutY="109.0" text="Порт:" />
+      <Label layoutX="58.0" layoutY="156.0" text="Ник:" />
+      <Button fx:id="btnConnect" layoutX="40.0" layoutY="197.0" mnemonicParsing="false" onAction="#connect" prefHeight="31.0" prefWidth="260.0" text="Подключиться" />
+      <TextField fx:id="txtfldIPAddress" layoutX="141.0" layoutY="60.0" />
+      <TextField fx:id="txtfldPort" layoutX="141.0" layoutY="104.0" />
+      <TextField fx:id="txtfldNickname" layoutX="141.0" layoutY="151.0" />
+      <Label layoutX="17.0" layoutY="25.0" style="-fx-background-color: #e6e9ef;" text="По умолчанию ip - localhost, ник - username" textFill="#80b94e" />
    </children>
 </AnchorPane>

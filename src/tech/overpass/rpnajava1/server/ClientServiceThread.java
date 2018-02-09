@@ -27,7 +27,6 @@ class ClientServiceThread extends Thread {
 		in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 		out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())), true);
 		ois = new ObjectInputStream(socket.getInputStream());
-		Server.lastMessage.send(out);
 		start();
 	}
 
@@ -36,12 +35,11 @@ class ClientServiceThread extends Thread {
 			username = in.readLine();
 			while (!socket.isClosed()) {
 				Message message = (Message) ois.readObject();
-				Server.lastMessage.add(message.getMessage());
 				DateFormat dateFormat = new SimpleDateFormat("hh:mm");
 				String completeMessage = message.getName() + " [" 
 						+ dateFormat.format(message.gerDate()) + "]> "
 						+ message.getMessage();
-				Server.clients.distribute(socket, completeMessage, username);
+				Server.clients.distribute(socket, completeMessage);
 				Server.logMessage(completeMessage);
 			}
 		} catch (IOException e) {
@@ -53,7 +51,7 @@ class ClientServiceThread extends Thread {
 			System.err.println("Class not found");
 		} finally {
 			System.out.println("Closing: " + socket);
-			Server.clients.distribute(socket, "Left: " + username, username);
+			Server.clients.distribute(socket, "Left: " + username);
 			try {
 				socket.close();
 			} catch (IOException e) {

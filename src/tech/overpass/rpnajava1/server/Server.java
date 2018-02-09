@@ -11,13 +11,11 @@ public class Server {
 
 	public static final int PORT = 1234;
 	public static Clients clients;
-	public static LastMessage lastMessage;
 	private static Logger messageLogger = Logger.getLogger(Server.class.getName());
 
 	public static void main(String[] args) throws IOException {
 		ServerSocket s = new ServerSocket(PORT);
 		clients = new Clients();
-		lastMessage = new LastMessage();
 		System.out.println("Started: " + s);
 		try {
 			LogConfigurator.configure(messageLogger);

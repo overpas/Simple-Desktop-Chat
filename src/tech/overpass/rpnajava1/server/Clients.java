@@ -13,9 +13,17 @@ class Clients {
 		count++;
 	}
 
-	public void distribute(Socket s, String message, String exceptUserName) {
+	public void distribute(Socket socket, String message, String exceptUserName) {
 		for (ClientServiceThread cst : clients) {
 			if (!cst.getUserName().equals(exceptUserName)) {
+				cst.sendMsg(message);
+			}
+		}
+	}
+	
+	public void distribute(Socket socket, String message) {
+		for (ClientServiceThread cst : clients) {
+			if (cst.getSocket() != socket) {
 				cst.sendMsg(message);
 			}
 		}

@@ -70,8 +70,9 @@ public class ClientThread extends Thread {
 				socket.close();
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
 			System.err.println("Cannot connect to server");
+			chatController.goBackToConnectionWindow();
+			return;
 		}
 	}
 	

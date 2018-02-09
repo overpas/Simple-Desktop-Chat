@@ -19,9 +19,9 @@ public class ReadMessage implements Runnable {
 	public void run() {
 		try {
 			while (true) {
-				String s = in.readLine();
-				System.out.println(s);
-				chatController.sendMessage(s);
+				String string = in.readLine();
+				System.out.println(string);
+				chatController.sendMessage(string);
 			}
 		} catch (IOException e) {
 			System.err.println("Socket closed.");

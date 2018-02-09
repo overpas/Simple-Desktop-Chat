@@ -41,6 +41,7 @@ public class ConnectionController implements Initializable {
 			Scene scene = new Scene(root);
 			chatController = (ChatController) fxmlLoader.getController();
 			chatController.setClient(this.client);
+			chatController.setStage(stage);
 			synchronized (client) {
 				clientThread.setChatController(chatController);
 				client.notifyAll();
@@ -90,7 +91,9 @@ public class ConnectionController implements Initializable {
 		stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
 			@Override
 			public void handle(WindowEvent windowEvent) {
-				clientThread.interrupt();
+				if (clientThread != null) {
+					clientThread.interrupt();
+				}
 				Platform.exit();
 			}
 		});

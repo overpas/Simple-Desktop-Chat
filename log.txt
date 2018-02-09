@@ -68,3 +68,85 @@ INFO: username [06:28]> bye
 INFO: dogPoo [06:28]> bb
 февр. 09, 2018 6:28:14 ПП tech.overpass.rpnajava1.server.Server logMessage
 INFO: dogPoo [06:28]> ok
+февр. 09, 2018 8:51:22 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [08:51]> выаыва
+февр. 09, 2018 8:51:23 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [08:51]> ывавыа
+февр. 09, 2018 8:51:24 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [08:51]> ываыав
+февр. 09, 2018 8:54:14 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [08:54]> dfsf
+февр. 09, 2018 8:54:15 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [08:54]> sdfsfd
+февр. 09, 2018 8:54:16 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [08:54]> sdfsfd
+февр. 09, 2018 8:54:35 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: jkjkoops [08:54]> asda
+февр. 09, 2018 8:54:40 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [08:54]> asdas
+февр. 09, 2018 8:54:45 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: jkjkoops [08:54]> qwe
+февр. 09, 2018 8:54:58 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [08:54]> asdasd
+февр. 09, 2018 8:57:13 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: illarion [08:57]> asdsad
+февр. 09, 2018 8:57:16 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: illarion [08:57]> asdasd
+февр. 09, 2018 8:57:26 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [08:57]> asdasd
+февр. 09, 2018 9:49:46 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [09:49]> sdfsdf
+февр. 09, 2018 9:49:48 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [09:49]> sdfsd
+февр. 09, 2018 9:49:49 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [09:49]> 
+февр. 09, 2018 9:49:52 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: terrain [09:49]> sdf
+февр. 09, 2018 9:49:53 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: terrain [09:49]> sdfdsf
+февр. 09, 2018 9:52:17 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [09:52]> hello
+февр. 09, 2018 9:52:21 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [09:52]> hi]
+февр. 09, 2018 9:52:26 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [09:52]> b
+февр. 09, 2018 9:52:29 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [09:52]> bb
+февр. 09, 2018 10:08:05 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [10:08]> dsfs
+февр. 09, 2018 10:08:12 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: anituser [10:08]> fiaaa
+февр. 09, 2018 10:20:49 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [10:20]> sdfsf
+февр. 09, 2018 10:20:52 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: flickering [10:20]> sdfsdf
+февр. 09, 2018 10:20:57 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [10:20]> sdf
+февр. 09, 2018 10:28:57 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [10:28]> ываы
+февр. 09, 2018 10:30:45 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [10:30]> sdfdsf
+февр. 09, 2018 10:31:07 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: prussky [10:31]> asdasd
+февр. 09, 2018 10:31:11 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: prussky [10:31]> 
+февр. 09, 2018 10:31:12 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: prussky [10:31]> sdfsf
+февр. 09, 2018 10:31:23 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [10:31]> sdfs
+февр. 09, 2018 10:40:07 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [10:40]> dfdsf
+февр. 09, 2018 10:40:10 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: reckless [10:40]> sdf
+февр. 09, 2018 10:40:12 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [10:40]> sdf
+февр. 09, 2018 10:40:14 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: reckless [10:40]> asdas
+февр. 09, 2018 10:41:39 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [10:41]> dsfdsf
+февр. 09, 2018 10:41:40 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [10:41]> sdf
+февр. 09, 2018 10:41:41 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [10:41]> sdf
+февр. 09, 2018 10:41:46 ПП tech.overpass.rpnajava1.server.Server logMessage
+INFO: username [10:41]> sdfsdf
